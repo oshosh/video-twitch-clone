@@ -4,7 +4,7 @@
  - ngrok(Cloud Edge)
  - Zustand + immer
  - shadcn/ui + Tailwind
-   - Radix
+   - Radix(stitches)
 
 # Auth
  - Clerk
