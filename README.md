@@ -1,5 +1,9 @@
-# 로컬 서버 ngrok
+# Next 14 + Prisma + Cloud Edge 
+ - PlanetScale
+ - ngrok
+ - shadcn/ui + Tailwind
+   - Radix
 
-# prisma db
+# Auth
+ - Clerk
 
-# env 파일은 따로 보관
