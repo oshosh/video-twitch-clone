@@ -26,7 +26,7 @@ export const Search = () => {
     const { searchQuery } = values;
     const url = qs.stringifyUrl(
       {
-        url: '/',
+        url: '/search',
         query: {
           term: searchQuery,
         },

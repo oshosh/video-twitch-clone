@@ -1,6 +1,7 @@
+import { PropsWithChildren } from 'react';
 import { Logo } from './_components/logo';
 
-const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+const AuthLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className='h-full flex flex-col items-center justify-center space-x-6'>
       <Logo />
