@@ -1,8 +1,10 @@
-# Next 14 + Prisma + Cloud Edge 
- - PlanetScale
- - ngrok
+# Stack
+ - Next 14 + React 18
+ - PlanetScale(Prisma)
+ - ngrok(Cloud Edge)
+ - Zustand + immer
  - shadcn/ui + Tailwind
-   - Radix
+   - Radix(stitches)
 
 # Auth
  - Clerk
