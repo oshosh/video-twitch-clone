@@ -1,7 +1,6 @@
 'use client';
 
 import qs from 'query-string';
-import { useState } from 'react';
 import { SearchIcon, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
