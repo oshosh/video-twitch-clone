@@ -1,6 +1,7 @@
 import { PropsWithChildren, Suspense } from 'react';
 import { Navbar } from './_components/navbar';
 import { Sidebar } from './_components/sidebar';
+import { Container } from './_components/container';
 
 const BrowseLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -10,7 +11,7 @@ const BrowseLayout = ({ children }: PropsWithChildren) => {
         <Suspense fallback={'스켈리톤'}>
           <Sidebar />
         </Suspense>
-        <div>{children}</div>
+        <Container>{children}</Container>
       </div>
     </>
   );
