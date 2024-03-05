@@ -4,6 +4,12 @@ import { Button } from '@/components/ui/button';
 import { useStoreSelector } from '@/store/hook/useStoreSelector';
 import { ArrowLeftFromLine, ArrowRightFromLine } from 'lucide-react';
 
+/**
+ * 'collapsed' 상태에 기반하여 컴포넌트를 렌더링하는 함수,
+ * 'collapsed' 값에 따라 Sidebar UI 요소의 상태 변화를 보여줍니다.
+ *
+ * @return {JSX.Element} 렌더링된 JSX 요소
+ */
 export const Toggle = () => {
   const { collapsed } = useStoreSelector(({ collapsed }) => ({ collapsed }));
   const { onExpand, onCollapse } = useStoreSelector();
