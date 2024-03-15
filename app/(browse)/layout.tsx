@@ -7,10 +7,8 @@ const BrowseLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Navbar />
-      <div className='flex h-full'>
-        <Suspense fallback={'스켈리톤'}>
-          <Sidebar />
-        </Suspense>
+      <div className='flex h-full pt-20'>
+        <Sidebar />
         <Container>{children}</Container>
       </div>
     </>

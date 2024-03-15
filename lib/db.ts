@@ -43,7 +43,7 @@ if (process.env.NODE_ENV !== 'production') {
  *
  * pscale 테스트
  *
- * pscle auth login
+ * pscale auth login
  * pscale connect
  */
 

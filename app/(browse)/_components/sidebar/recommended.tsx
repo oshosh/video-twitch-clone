@@ -1,8 +1,8 @@
 'use client';
-
 import { useStoreSelector } from '@/store/hook/useStoreSelector';
 import { User } from '@prisma/client';
 import { useMemo } from 'react';
+import { UserItem } from './user-item';
 
 interface RecommendedProps {
   data: User[];
@@ -25,13 +25,20 @@ export const Recommended = ({ data }: RecommendedProps) => {
     <div>
       {showLabel && (
         <div className='pl-6 mb-4'>
-          <p className='text-sm text-muted-foreground'>Recommended</p>
+          <p className='text-sm text-muted-foreground'>추천</p>
         </div>
       )}
       <ul className='space-y-2 px-2'>
-        {data.map((user) => {
-          return <li key={user.id}>{user.username}</li>;
-        })}
+        <li>
+          {data.map((user) => (
+            <UserItem
+              key={user.id}
+              username={user.username}
+              imageUrl={user.imageUrl}
+              isLive={true}
+            />
+          ))}
+        </li>
       </ul>
     </div>
   );
