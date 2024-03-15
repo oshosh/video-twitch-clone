@@ -15,7 +15,9 @@ export function Container({ children }: ContainerProps) {
     ({ collapsed, onCollapse, onExpand }) => ({ collapsed, onExpand, onCollapse })
   );
 
+  // 최대 너비가 1024px 이하 인 경우
   const matches = useMediaQuery('(max-width: 1024px)');
+
   useEffect(() => {
     if (matches) {
       onCollapse();

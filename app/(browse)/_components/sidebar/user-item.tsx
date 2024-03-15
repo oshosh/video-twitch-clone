@@ -4,11 +4,11 @@ import { usePathname } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-// import { Skeleton } from '@/components/ui/skeleton';
+import { Skeleton } from '@/components/ui/skeleton';
 import Link from 'next/link';
 import { UserAvatar } from '@/components/user-avatar';
 import { useStoreSelector } from '@/store/hook/useStoreSelector';
-// import { LiveBadge } from '@/components/live-badge';
+import { LiveBadge } from '@/components/live-badge';
 
 interface UserItemProps {
   username: string;
@@ -36,20 +36,20 @@ export function UserItem({ username, imageUrl, isLive }: UserItemProps) {
         <div className={cn('flex items-center w-full gap-x-4', collapsed && 'justify-center')}>
           <UserAvatar username={username} imageUrl={imageUrl} isLive={isLive} />
           {!collapsed && <p className='truncate'>{username}</p>}
-          {/* {!collapsed && isLive && <LiveBadge className='ml-auto' />} */}
+          {!collapsed && isLive && <LiveBadge className='ml-auto' />}
         </div>
       </Link>
     </Button>
   );
 }
 
-// export function UserItemSkeleton() {
-//   return (
-//     <li className='flex items-center gap-x-4 px-3 py-2'>
-//       <Skeleton className='min-h-[32px] win-w-[32px] rounded-full' />
-//       <div className='flex-1'>
-//         <Skeleton className='h-6' />
-//       </div>
-//     </li>
-//   );
-// }
+export const UserItemSkeleton = () => {
+  return (
+    <li className='flex items-center gap-x-4 px-3 py-2'>
+      <Skeleton className='min-h-[32px] win-w-[32px] rounded-full' />
+      <div className='flex-1'>
+        <Skeleton className='h-6' />
+      </div>
+    </li>
+  );
+};

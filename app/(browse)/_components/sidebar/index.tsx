@@ -1,6 +1,6 @@
 import { Wrapper } from './wrapper';
-import { Toggle } from './toggle';
-import { Recommended } from './recommended';
+import { Toggle, ToggleSkeleton } from './toggle';
+import { Recommended, RecommendedSkeleton } from './recommended';
 import { getRecommended } from '@/lib/recommended-service';
 
 /**
@@ -20,3 +20,13 @@ export const Sidebar = async () => {
     </Wrapper>
   );
 };
+
+export function SidebarSkeleton() {
+  return (
+    // 기존 Sidebar 위에  엎어쳐 있는 화면임
+    <aside className='fixed left-0 flex flex-col w-[70px] lg:w-60 h-full bg-background border-r border-[#2D2E35] z-50'>
+      <ToggleSkeleton />
+      <RecommendedSkeleton />
+    </aside>
+  );
+}

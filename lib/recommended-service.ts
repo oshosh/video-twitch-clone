@@ -6,6 +6,8 @@ import { db } from './db';
  * @return {User[]} 추천 사용자의 배열
  */
 export const getRecommended = async () => {
+  // await new Promise((resolve) => setTimeout(resolve, 500));
+
   const users = await db.user.findMany({
     orderBy: {
       createdAt: 'desc',
